@@ -17,5 +17,12 @@
            required>
     <button type="submit">Поиск</button>
   </form>
+
+  <form class="CubeImg cf">
+    <a href="delete?id=1">
+     <img src="Cube.png"/>
+    </a>
+  </form>
+
   </body>
 </html>

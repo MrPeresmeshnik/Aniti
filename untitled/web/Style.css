@@ -1,0 +1,21 @@
+body{
+    background: url(/BG.png);
+}
+.form-wrapper{
+    width: 500px;
+    padding: 15px;
+    margin: 150px auto;
+    background: rgba(0,0,0,.2);
+    border-radius: 10px;
+}
+.form-wrapper input{
+    width: 380px;
+    height: 20px;
+    padding:  10px 5px;
+    float: left;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    border: 0px;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+}

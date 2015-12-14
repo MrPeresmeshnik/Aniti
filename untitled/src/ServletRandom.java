@@ -11,26 +11,24 @@ import java.util.List;
 /**
  * Created by MSI on 14.12.2015.
  */
-@WebServlet(name = "Servletadd", urlPatterns = "/add")
-public class Servletadd extends HttpServlet {
+@WebServlet(name = "ServletRandom", urlPatterns = "/random")
+public class ServletRandom extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8");
-        String title = request.getParameter("search");
-        List<FindAnime> findAnime = new ArrayList<>();
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<FindAnime> findAnimeList = new ArrayList<>();
         try {
-            findAnime = DBAnime.GetAnime(title);
+            findAnimeList.add(DBAnime.getRandom());
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
 
-
-        request.setAttribute("animeList", findAnime);
+        request.setAttribute("animeList", findAnimeList);
         request.getRequestDispatcher("index.jsp").forward(request, response);
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 }

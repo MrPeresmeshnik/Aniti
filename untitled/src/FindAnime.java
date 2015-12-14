@@ -2,9 +2,8 @@
  * Created by MSI on 14.12.2015.
  */
 public class FindAnime {
-    int n;
 
-    public static int Sort(int i)
+    public int Sort(int i)
     {
         if(i == 3)
             return 2;

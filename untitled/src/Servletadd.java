@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Created by MSI on 14.12.2015.
@@ -15,15 +16,12 @@ public class Servletadd extends HttpServlet {
         String title = request.getParameter("search");
 
 
-        if(DBAnime.GG(title)==2){
-            response.sendRedirect("http://ya.ru");
-            return;
+        try {
+           if(DBAnime.GetAnime(title) == 2)
+               response.sendRedirect("http://ya.ru");
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
         }
-        /*
-       if(title.length()==2){
-           response.sendRedirect("http://ya.ru");
-           return;
-       }*/
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

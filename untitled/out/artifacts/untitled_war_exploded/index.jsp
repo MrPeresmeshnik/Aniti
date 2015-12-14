@@ -41,7 +41,7 @@
 
     <form class="CubeImg">
         <a href="/random">
-            <img src="Cube.png"/>
+            <img src="smile.gif"/>
         </a>
     </form>
 

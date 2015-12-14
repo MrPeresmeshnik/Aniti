@@ -12,17 +12,19 @@
   </head>
   <link rel="stylesheet" href="Style.css">
   <body>
-  <form class="form-wrapper cf">
-    <input type="text" placeholder="Введите название аниме"
-           required>
+  <form action="/add" method="POST" id="search" class="cf">
     <button type="submit">Поиск</button>
+    <input name="search" type="text" placeholder="Введите название аниме"
+           required>
   </form>
 
-  <form class="CubeImg cf">
-    <a href="delete?id=1">
-     <img src="Cube.png"/>
+  <form class="CubeImg">
+    <a href="/delete?id=1">
+     <img src="Cube.png" />
     </a>
   </form>
+
+
 
   </body>
 </html>

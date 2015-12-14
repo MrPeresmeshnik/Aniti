@@ -8,18 +8,45 @@ body{
     background: rgba(0,0,0,.2);
     border-radius: 10px;
 }
-.form-wrapper input{
-    width: 380px;
-    height: 20px;
-    padding:  10px 5px;
-    float: left;
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-    border: 0px;
-    background: #eee;
-    border-radius: 3px 0 0 3px;
-}
-.CubeImg {
-    padding: 100px;
+
+#search {
+    width: 500px;
+    padding: 15px;
     margin: 150px auto;
+
+}
+
+#search input {
+    float: right;
+    width: 380px;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 10px;
+    background: rgba(0, 0, 0, 0);
+
+}
+
+#search input:focus {
+    outline: 0px;
+
+}
+
+#search button {
+    height: 40px;
+    width: 110px;
+    position: relative;
+    float: right;
+    border: 0px;
+    padding: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 40px;
+    background: rgba(245, 15, 0, 0.57);
+    color: wheat;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
+.CubeImg{
+    position:absolute; top:20px; left:1816px;
 }
